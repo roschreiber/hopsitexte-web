@@ -94,5 +94,7 @@ function checkHopsitext(text) {
 document.getElementById('textInput').addEventListener('input', function () {
     const text = this.value;
     const result = checkHopsitext(text);
-    document.getElementById('result').innerText = result;
+    const resultElement = document.getElementById('result');
+    resultElement.innerText = result;
+    resultElement.style.color = result === "Der Text ist ein Hopsitext." ? 'green' : 'red';
 });
